@@ -1,0 +1,32 @@
+Part Name,Quantity,Unit Price (USD),Purpose,Link
+10uF MLCC 0805 (10V X5R),6,$0.01,Power supply filtering and decoupling,https://robu.in/product-category/mlcc/
+22uF MLCC 0805 (10V X5R),3,$0.03,Bulk power filtering,https://robu.in/product/cap-smd-mlcc-22uf-10v-x5r-0805-taiyo-yuden/
+100nF MLCC 0603,4,$0.0088,High-frequency IC decoupling,https://robu.in/product-category/mlcc/
+1uF MLCC 0603 16V X5R,1,$0.02,Local power filtering,https://robu.in/product/mc0603x105m160ct-murata-ceramic-capacitor-1uf-16v-x5r-20-0603/
+USB-C 16-pin receptacle,1,$0.25,Charging and USB connection,https://robu.in/product/type-c-31-m-31-hroparts-5a-1-surface-mount-right-angle-16p-female-30%E2%84%8380%E2%84%83-type-c-smd-usb-connectors-rohs/
+JST PH 3-pin battery connector,1,$0.05,Battery connection,https://robu.in/product-category/pcb-receptacles/
+JST PH 2-pin speaker connector,1,$0.10,Speaker connection,https://robu.in/product/b2b-ph-k-slfsn-jst-1x2p-2p-ph-tin-2-25%25e2%2584%258385%25e2%2584%2583-2a-1-2mm-brass-straight-pluginp2mm-wire-to-board-connector-rohs/
+24-pin 0.5mm FPC camera connector,1,$0.27,Connects camera flex cable to PCB,https://robu.in/?s=24+pin+FPC+0.5mm&post_type=product
+8-pin 0.5mm FPC display connector,1,$0.21,Connects display flex cable to PCB,https://robu.in/?s=8+pin+FPC+0.5mm&post_type=product
+2x3 2.54mm programming header,1,$0.10,Firmware programming/debug interface,https://robu.in/product-category/pcb-receptacles/
+"1.5uH shielded inductor, 4A target",1,$0.32,Buck-boost power converter component,https://robu.in/product-category/fixed-value-inductors/
+5.1kΩ 0603 1% resistor,2,$0.0011,USB-C configuration resistors,https://robu.in/?s=5.1k+0603+1%25&post_type=product
+10kΩ 0603 resistor,1,$0.0035,Circuit bias and pull-up/pull-down,https://robu.in/product/yageo-10k-ohm-1-4w-0603-surface-mount-chip-resistor-pack-of-50/
+1MΩ 0603 resistor,1,$0.0032,Circuit biasing,https://robu.in/?s=1M+0603+resistor&post_type=product
+180kΩ 0603 resistor,1,$0.0032,Voltage sensing/divider,https://robu.in/?s=180k+0603+resistor&post_type=product
+8.2kΩ 0603 resistor 1%,2,$0.0073,Circuit biasing and voltage setting,https://robu.in/?s=8.2k+0603+1%25&post_type=product
+100kΩ 0603 resistor 1%,1,$0.0075,Circuit biasing,https://robu.in/product/mcwr06x1003ftlmulticomp-prosmd-chip-resistor-100-kohm-%25c2%25b1-1-100-mw-0603-1608-metric-thick-film-general-purpose-pack-of-10/
+ESP32-S3-WROOM-1-N16R8 module,1,$6.09,"Main processor, wireless connectivity and control",https://robu.in/product/espressif-esp32-s3-wroom-1-n16r8-module/
+ICS-43434 MEMS microphone IC,1,$2.67,Captures voice/audio input,https://robu.in/?s=ICS-43434&post_type=product
+MAX98357A amplifier IC,1,$1.60,Drives the speaker from digital audio,https://robu.in/?s=MAX98357A&post_type=product
+BQ24074 charger IC,1,$1.93,LiPo charging and power-path management,https://robu.in/?s=BQ24074&post_type=product
+TPS63020 buck-boost IC,1,$2.67,Regulates battery voltage for system power,https://robu.in/?s=TPS63020&post_type=product
+USBLC6-2SC6 ESD protection IC,1,$0.12,Protects USB lines from electrostatic discharge,https://robu.in/product/usblc6-2sc6-ms-msksemi-4-5a-15v-150w-6v-5v-sot-23-6-esd-and-surge-protection-tvs-esd-rohs/
+OV2640 2MP camera module (without connector),1,$3.09,Captures still images,https://robu.in/product-category/iot-cameras/
+1.3-inch TFT 240x240 ST7789 display module,1,$4.16,Displays device status and visual interface,https://robu.in/product-category/tft-lcd-display/
+8Ω mini speaker,1,$1.78,Audio output,https://robu.in/product-category/smartelex-audio-modules/
+3.7V 400mAh 1S LiPo battery,1,$1.75,Rechargeable power source,https://robu.in/product/wly701635-400mah-3-7v-single-cell-rechargeable-lipo-battery/
+Camera FPC cable,1,$0.16,Connects camera module to PCB,https://robu.in/product-category/frc-cable/
+Display FPC cable,1,$0.11,Connects display module to PCB,https://robu.in/product-category/frc-cable/
+Battery connector lead / NTC wiring,1,$0.21,Battery wiring and temperature sensing,https://robu.in/product-category/pcb-receptacles/
+Wearable pendant attachment / fasteners,1,$1.07,Mechanical wearable mounting,https://robu.in/
