@@ -1,67 +1,45 @@
-# URO 🪐
+# URO V1 firmware 0.2.0
 
-A little AI companion for the real world.
+This is the first **hardware bring-up firmware**, written in C++ for the ESP32-S3 module using the Arduino framework and PlatformIO. It is not yet the complete URO assistant firmware.
 
-«What if AI wasn't just inside our phones, but somthing we can actually carry with us?»
+## Implemented
 
-# 💡 About URO
+- BLE GATT UART-style service named `URO-V1`.
+- `PING`, `STATUS`, `VERSION`, `HELP`, and `REBOOT` commands.
+- USB CDC serial command input at 115200 baud.
+- Reports chip revision, free heap, PSRAM detection and subsystem readiness.
 
-URO is an AI wearable I'm trying to build. The idea is to make a small device that you can talk to, ask questions, take pictures with, and get AI-powered responces without having to do everything on your phone.
+## BLE UUIDs
 
-It's supposed to connect with an Android app, which handles the AI, internet and other processings, while the device itself handles voice input, audio output, camera and comunication.
+- Service: `6E400001-B5A3-F393-E0A9-E50E24DCCA9E`
+- Write / RX: `6E400002-B5A3-F393-E0A9-E50E24DCCA9E`
+- Notify / TX: `6E400003-B5A3-F393-E0A9-E50E24DCCA9E`
 
-I'm still figuring out alot of things, but that's what makes this project intresting to me.
+Send one UTF-8 command per write. Subscribe to TX notifications to receive the response.
 
-# ✨ Features I'm Working On
+## Build
 
-- 🎙️ Voice interaction in English, Hindi and Hinglish.
-- 🧠 AI-powered conversations and research using Gemini.
-- 📸 Camera for taking pictures and asking questions about them.
-- 🔊 Audio responces through a small speaker.
-- 📱 Android application for connecting everything together.
-- 🔵 Bluetooth comunication between the device and phone.
-- 🎭 An animated AI character with its own personality.
+```sh
+pio run -d firmware
+```
 
-# ⚙️ How It Works
+The target is an ESP32-S3 with 16 MB flash and 8 MB octal PSRAM (`ESP32-S3-WROOM-1-N16R8`). A project-local PlatformIO board definition sets the 16 MB flash and QIO/OPI memory configuration. Confirm the actual module marking before flashing.
 
-Voice / Photo
-      ↓
-   URO Device
-      ↓ Bluetooth
- Android App
-      ↓
-  Gemini AI
-      ↓
-Response → App → URO
+## Build verification
 
-🛠️ Tech & Hardware
+PlatformIO compiled firmware version 0.2.0 successfully for the custom 16 MB flash / 8 MB OPI PSRAM board profile. The output was validated with esptool image-info. This is a compile check only; no physical PCB has been flashed or tested.
 
-Component| Technology
-Microcontroller| ESP32-S3 (planned)
-AI| Gemini
-Connectivity| Bluetooth LE
-Application| Android
-Firmware| Embedded C/C++
-PCB| Custom PCB design
-Enclosure| 3D CAD design
+## Android flashing
 
-# 🚧 Current Status
+The PCB routes USB-C D+/D− directly to the ESP32-S3 native USB pins. J6 is a 2×3 header: pad 1=GND, 2=3V3, 3=UART_TX, 4=UART_RX, 5=ESP_EN, 6=GPIO0/BOOT. It exposes the signals needed to enter ROM download mode; the board does not have dedicated BOOT/RESET pushbuttons. An Android USB-OTG flasher that supports ESP32-S3 can be used, but the build-generated flash files and offsets must be followed exactly. Do not guess offsets. The combined image in `release/URO-V1-phone-flash-r3.bin` is intended to be written at `0x0`; its component layout is in `release/flash-manifest.json`.
 
-URO is currently in its design and developement phase. I'm working on the PCB, schematics, CAD, firmware and the software architechture.
+## Not implemented yet
 
-The physical prototype isn't build yet. There is still alot to figure out, test and probably redesign.
+- Camera capture: exact camera sensor/module and flex orientation are not selected.
+- Display: exact panel/controller, resolution and backlight current are not selected.
+- Microphone capture and speaker playback: I2S pins are reserved, but audio driver and stream protocol are not yet integrated.
+- Battery percentage: there is no fuel-gauge IC or battery ADC measurement circuit on this PCB.
+- Gemini/API calls: those belong in the Android app/backend, not in this firmware.
+- Secure BLE pairing, OTA update and production power management.
 
-# 🌱 Why I'm Building It
-
-I'm a student trying to build something way beyond what I already know, and honestly, I'm learning as I go.
-
-This project is my attempt to bring together AI, electronics, software and design into something real. I don't know exactly how difficult every part will be, but I want to try, make mistakes, fix them and see where this idea goes.
-
-This is URO. Still building, still learning.
-
----
-
-Built with curisity, contless ideas and a lot of debugging.
-(hehehe I'm pretty intelligent )
-# Cooked by Raghav 
-
+Do not treat this firmware as a finished wearable product. Test on a current-limited bench supply first and have an experienced adult supervise the first hardware power-up, especially when a LiPo battery is involved.

@@ -1,0 +1,33 @@
+Designators,Value,Manufacturer Part Number,Footprint,Qty,LCSC Part Number,Notes
+C1,10uF USB input,,Capacitor_SMD:C_0805_2012Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C10,1uF EN reset,,Capacitor_SMD:C_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C11,100nF ESP32 bypass,,Capacitor_SMD:C_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C12,100nF microphone bypass,,Capacitor_SMD:C_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C13,10uF amplifier bypass,,Capacitor_SMD:C_0805_2012Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C14,100nF amplifier bypass,,Capacitor_SMD:C_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C2,10uF battery,,Capacitor_SMD:C_0805_2012Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C3,10uF system,,Capacitor_SMD:C_0805_2012Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+"C4, C5",10uF VIN,,Capacitor_SMD:C_0805_2012Metric,2,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+"C6, C7, C8",22uF VOUT,,Capacitor_SMD:C_0805_2012Metric,3,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+C9,100nF VINA,,Capacitor_SMD:C_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+J1,USB-C 16P,TYPE-C-31-M-12,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,1,,
+J2,1S LiPo + / NTC,JST PH 3-pin battery connector,parts:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,1,,Requires a protected 1-cell LiPo pack with compatible 10k NTC lead; verify connector polarity and pack dimensions.
+J3,8 ohm speaker,,parts:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal,1,,Speaker connector only; verify speaker impedance and rated power before fitting.
+J4,Camera DVP 24P FPC,,Connector_FFC-FPC:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal,1,,Connector only. Camera sensor/module and flex contact orientation are not yet selected.
+J5,SPI display 8P FPC,,Connector_FFC-FPC:Hirose_FH12-8S-0.5SH_1x08-1MP_P0.50mm_Horizontal,1,,"Connector only. Display controller, resolution, flex orientation and backlight current must be confirmed."
+J6,UART / BOOT / RESET 3V3,,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,1,,"2x3 programming header: GND, 3V3, UART_TX, UART_RX, ESP_EN, BOOT0. 3.3V logic only."
+L1,1.5uH 4A shielded,FPB322520D-1R5MT0,Inductor_SMD:L_1210_3225Metric,1,C29780742,
+R1,5.1k 1% CC1,0603 5.1k 1%,Resistor_SMD:R_0603_1608Metric,1,C23186,
+R2,5.1k 1% CC2,0603 5.1k 1%,Resistor_SMD:R_0603_1608Metric,1,C23186,
+R3,10k EN pull-up,,Resistor_SMD:R_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+R4,1M FB upper,,Resistor_SMD:R_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+R5,180k FB lower,,Resistor_SMD:R_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+R6,8.2k ISET,,Resistor_SMD:R_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+R7,8.2k ILIM,,Resistor_SMD:R_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+R8,100k gain select,,Resistor_SMD:R_0603_1608Metric,1,,Manufacturer part number and electrical rating are not specified; select and verify before ordering.
+U1,ESP32-S3-WROOM-1-N16R8,ESP32-S3-WROOM-1-N16R8,RF_Module:ESP32-S3-WROOM-1,1,C2913202,ESP32-S3-WROOM-1-N16R8 module; verify exact module marking and antenna keep-out.
+U2,ICS-43434 I2S MEMS microphone,ICS-43434,parts:MIC-SMD_6P-L3.5-W2.7-P0.90-BL,1,C5656610,
+U3,MAX98357A I2S speaker amplifier,MAX98357AETE+T,parts:TQFN-16-1EP_3x3mm_P0.5mm_EP1.23x1.23mm,1,C910544,
+U4,BQ24074 power-path charger,BQ24074RGTT,parts:VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm,1,C2861252,BQ24074 charger/power-path IC; use only with the specified protected 1-cell battery arrangement.
+U5,TPS63020 3V3 buck-boost,TPS63020DSJR,parts:VSON-14_L4.0-W3.0-P0.50-BL-EP_TI_DSJ,1,C15483,TPS63020 buck-boost regulator; verify inductor and capacitor effective values under DC bias.
+U6,USBLC6-2SC6,USBLC6-2SC6,parts:SOT-23-6,1,C2687116,

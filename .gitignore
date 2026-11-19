@@ -1,0 +1,9 @@
+# KiCad temporary/local files
+*.kicad_prl
+*.bak
+*-backups/
+# PlatformIO generated files
+firmware/.pio/
+# Local logs and caches
+.DS_Store
+__pycache__/

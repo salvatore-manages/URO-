@@ -1,0 +1,26 @@
+{
+  "target": "ESP32-S3-WROOM-1-N16R8",
+  "flash_size": "16MB",
+  "flash_mode": "dio",
+  "flash_frequency": "80m",
+  "combined_image": "URO-V1-phone-flash-r3.bin",
+  "combined_image_flash_offset": "0x0",
+  "components": [
+    {
+      "file": "bootloader.bin",
+      "flash_offset": "0x0"
+    },
+    {
+      "file": "partitions.bin",
+      "flash_offset": "0x8000"
+    },
+    {
+      "file": "boot_app0.bin",
+      "flash_offset": "0xe000"
+    },
+    {
+      "file": "firmware.bin",
+      "flash_offset": "0x10000"
+    }
+  ]
+}
